@@ -5,7 +5,7 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "0.0.0.0:9090",
+      "external_controller": "127.0.0.1:9090",
       "external_ui": "ui",
       "secret": "",
       "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
@@ -104,7 +104,7 @@
       "tag":"OpenAI",
       "type":"selector",
       "outbounds":[
-        "Proxy",
+        "auto",
         "TaiWan",
         "Singapore",
         "Japan",
@@ -117,7 +117,7 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
-        "Proxy",
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -125,13 +125,13 @@
         "America",
         "Others"
       ],
-      "default": "Proxy"
+      "default": "auto"
     },
     {
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
-        "Proxy",
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -139,26 +139,26 @@
         "America",
         "Others"
       ],
-      "default": "Proxy"
+      "default": "auto"
     },
     {
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
-        "Proxy",
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
         "Others"
-      ],"default": "Proxy"
+      ],"default": "auto"
     },
     {
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
-        "Proxy",
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -166,7 +166,7 @@
         "America",
         "Others"
       ],
-      "default": "Proxy"
+      "default": "auto"
     },
     {
       "tag":"BiliBili",
@@ -189,7 +189,7 @@
       "tag":"Spotify",
       "type":"selector",
       "outbounds":[
-        "Proxy",
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -203,7 +203,7 @@
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
-        "Proxy",
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -216,7 +216,7 @@
       "tag":"Netflix",
       "type":"selector",
       "outbounds":[
-        "Proxy",
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -229,7 +229,7 @@
       "tag":"Disney+",
       "type":"selector",
       "outbounds":[
-        "Proxy",
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -296,7 +296,7 @@
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
-        "Proxy",
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -305,7 +305,7 @@
         "Others",
         "direct"
       ],
-      "default": "Proxy"
+      "default": "auto"
     },
     {
       "tag":"China",
@@ -525,7 +525,7 @@
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
+        "url": "https://anti-ad.net/anti-ad-sing-box.srs",
         "download_detour": "direct"
       },
       {
