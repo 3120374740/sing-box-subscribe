@@ -21,12 +21,13 @@
     "servers": [
       {
         "tag": "proxyDns",
-        "address": "tls://8.8.8.8",
+        "address": "h3://8.8.8.8/dns-query",
         "detour": "Proxy"
+        "client_subnet": "1.0.1.0"
       },
       {
         "tag": "localDns",
-        "address": "https://223.5.5.5/dns-query",
+        "address": "quic://223.5.5.5",
         "detour": "direct"
       },
       {
@@ -62,7 +63,7 @@
       }
     ],
     "final": "localDns",
-    "strategy": "ipv4_only"
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
@@ -104,6 +105,7 @@
       "tag":"OpenAI",
       "type":"selector",
       "outbounds":[
+        "Proxy",
         "TaiWan",
         "Singapore",
         "Japan",
@@ -116,6 +118,7 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
+        "Proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -128,6 +131,7 @@
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
+        "Proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -140,6 +144,7 @@
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
+        "Proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -152,6 +157,7 @@
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
+        "Proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -181,6 +187,7 @@
       "tag":"Spotify",
       "type":"selector",
       "outbounds":[
+        "Proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -194,6 +201,7 @@
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
+        "Proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -206,6 +214,7 @@
       "tag":"Netflix",
       "type":"selector",
       "outbounds":[
+        "Proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -218,6 +227,7 @@
       "tag":"Disney+",
       "type":"selector",
       "outbounds":[
+        "Proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -269,6 +279,8 @@
       "tag":"Streaming",
       "type":"selector",
       "outbounds":[
+        "direct",
+        "Proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -281,6 +293,7 @@
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
+        "Proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -508,7 +521,7 @@
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
+        "url": "https://mirror.ghproxy.com/https://anti-ad.net/anti-ad-sing-box.srs",
         "download_detour": "direct"
       },
       {
