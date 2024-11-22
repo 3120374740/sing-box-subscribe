@@ -23,7 +23,6 @@
         "tag": "proxyDns",
         "address": "h3://8.8.8.8/dns-query",
         "detour": "Proxy"
-        "client_subnet": "1.0.1.0"
       },
       {
         "tag": "localDns",
