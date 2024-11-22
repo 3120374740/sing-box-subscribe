@@ -32,7 +32,7 @@
       },
       {
         "tag": "block",
-        "address": "rcode://success"
+        "address": "rcode://refused"
       }
     ],
     "rules": [
