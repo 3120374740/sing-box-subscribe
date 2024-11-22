@@ -96,7 +96,6 @@
       "sniff_override_destination": false
     }
   ],
-  ],
   "outbounds": [
     {
       "tag":"Proxy",
