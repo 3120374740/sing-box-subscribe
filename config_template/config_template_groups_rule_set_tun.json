@@ -520,7 +520,7 @@
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://anti-ad.net/anti-ad-sing-box.srs",
+        "url": "https://anti-ad.net/anti-ad-sing-box.srs",
         "download_detour": "direct"
       },
       {
