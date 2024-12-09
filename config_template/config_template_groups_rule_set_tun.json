@@ -75,9 +75,6 @@
       "sniff": true,
       "endpoint_independent_nat": false,
       "stack": "system",
-      "route_address_set": [
-        "geoip-cloudflare"
-      ],
       "route_exclude_address_set": [
         "geoip-cn"
       ],
