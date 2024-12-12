@@ -1,7 +1,6 @@
 {
   "log": {
     "level": "info",
-    "output": "/etc/sing/box.log",
     "timestamp": true
   },
   "experimental": {
@@ -76,9 +75,7 @@
       "sniff": true,
       "endpoint_independent_nat": false,
       "stack": "system",
-      "route_exclude_address_set": [
-        "geoip-cn"
-      ],
+      "route_exclude_address_set": "geoip-cn",
       "platform": {
         "http_proxy": {
           "enabled": true,
