@@ -500,7 +500,7 @@
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+        "url": "https://anti-ad.net/anti-ad-sing-box.srs",
         "download_detour": "direct"
       },
       {
