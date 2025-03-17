@@ -67,6 +67,9 @@
       "auto_redirect": false,
       "strict_route": true,
       "stack": "system",
+      "route_exclude_address_set": [
+        "geoip-cn"
+      ],
       "platform": {
         "http_proxy": {
           "enabled": true,
