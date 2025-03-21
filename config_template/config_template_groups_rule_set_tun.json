@@ -330,10 +330,7 @@
       ],
       "filter":[
         {"action":"include","keywords":["🇸🇬|SG|sg|新加坡|狮|Singapore"]}
-      ],
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
-      "tolerance": 50
+      ]
     },
     {
       "tag":"Japan",
@@ -363,7 +360,7 @@
     },
     {
       "tag":"Others",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
