@@ -5,7 +5,7 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "127.0.0.1:9090",
+      "external_controller": "0.0.0.0:9090",
       "external_ui": "ui",
       "secret": "",
       "external_ui_download_url": "https://gh-proxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
@@ -13,7 +13,7 @@
       "default_mode": "rule"
     },
   "cache_file": {
-    "enabled": true,
+    "enabled": false,
     "store_fakeip": false
     }
   },
@@ -21,7 +21,7 @@
     "servers": [
       {
         "tag": "proxyDns",
-        "address": "tls://8.8.8.8",
+        "address": "https://1.1.1.1/dns-query",
         "detour": "Proxy"
       },
       {
@@ -53,22 +53,24 @@
       }
     ],
     "final": "localDns",
-    "strategy": "ipv4_only"
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
       "tag": "tun-in",
       "type": "tun",
       "address": [
-        "172.19.0.0/30"
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
       ],
       "mtu": 9000,
       "auto_route": true,
+      "auto_redirect": true,
       "strict_route": true,
       "stack": "system",
       "platform": {
         "http_proxy": {
-          "enabled": true,
+          "enabled": false,
           "server": "127.0.0.1",
           "server_port": 2080
         }
@@ -107,6 +109,7 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -119,6 +122,7 @@
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -131,6 +135,7 @@
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -291,7 +296,7 @@
     },
     {
       "tag":"HongKong",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
@@ -301,7 +306,7 @@
     },
     {
       "tag":"TaiWan",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
@@ -311,7 +316,7 @@
     },
     {
       "tag":"Singapore",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
@@ -321,7 +326,7 @@
     },
     {
       "tag":"Japan",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
@@ -331,7 +336,7 @@
     },
     {
       "tag":"America",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
@@ -341,7 +346,7 @@
     },
     {
       "tag":"Others",
-      "type":"selector",
+      "type":"urltest",
       "outbounds":[
         "{all}"
       ],
@@ -493,7 +498,7 @@
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+        "url": "https://anti-ad.net/anti-ad-sing-box.srs",
         "download_detour": "direct"
       },
       {
