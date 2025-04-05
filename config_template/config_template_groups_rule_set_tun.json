@@ -55,12 +55,6 @@
     "final": "localDns",
     "strategy": "prefer_ipv4"
   },
-  "ntp": {
-    "enabled": true,
-    "server": "ntp1.aliyun.com",
-    "server_port": 123,
-    "interval": "30m",
-  },
   "inbounds": [
     {
       "tag": "tun-in",
