@@ -109,12 +109,12 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
+        "America",
         "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
-        "America",
         "Others"
       ]
     },
@@ -122,12 +122,12 @@
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
+        "America",
         "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
-        "America",
         "Others"
       ]
     },
@@ -135,12 +135,12 @@
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
+        "America",
         "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
-        "America",
         "Others"
       ]
     },
@@ -148,11 +148,11 @@
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
+        "America",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
-        "America",
         "Others"
       ]
     },
@@ -202,11 +202,11 @@
       "tag":"Netflix",
       "type":"selector",
       "outbounds":[
+        "America",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
-        "America",
         "Others"
       ]
     },
@@ -214,11 +214,11 @@
       "tag":"Disney+",
       "type":"selector",
       "outbounds":[
+        "America",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
-        "America",
         "Others"
       ]
     },
