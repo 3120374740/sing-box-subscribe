@@ -5,7 +5,7 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "127.0.0.1:9090",
+      "external_controller": "0.0.0.0:9090",
       "external_ui": "ui",
       "secret": "",
       "external_ui_download_url": "https://gh-proxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
@@ -21,7 +21,7 @@
     "servers": [
       {
         "tag": "proxyDns",
-        "address": "tls://8.8.8.8",
+        "address": "https://1.1.1.1/dns-query",
         "detour": "Proxy"
       },
       {
@@ -53,7 +53,7 @@
       }
     ],
     "final": "localDns",
-    "strategy": "ipv4_only"
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
@@ -64,6 +64,7 @@
       ],
       "mtu": 9000,
       "auto_route": true,
+      "auto_redirect": true,
       "strict_route": true,
       "stack": "system",
       "platform": {
@@ -107,6 +108,7 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -119,6 +121,7 @@
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -131,6 +134,7 @@
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -143,6 +147,7 @@
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -260,6 +265,7 @@
       "tag":"Streaming",
       "type":"selector",
       "outbounds":[
+        "auto",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -389,12 +395,12 @@
         "action": "hijack-dns"
       },
       {
-        "rule_set": "geosite-category-ads-all",
+        "rule_set": "anti-ad",
         "clash_mode": "rule",
         "action": "reject"
       },
       {
-        "rule_set": "geosite-category-ads-all",
+        "rule_set": "anti-ad",
         "clash_mode": "global",
         "outbound": "Proxy"
       },
@@ -490,10 +496,10 @@
     ],
     "rule_set": [
       {
-        "tag": "geosite-category-ads-all",
+        "tag": "anti-ad",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+        "url": "https://anti-ad.net/anti-ad-sing-box.srs",
         "download_detour": "direct"
       },
       {
